@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - LayerZoo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<!-- Uniform navigation consistent with all pages - fixes layout issues -->
+<div class="topnav" id="myTopnav">
+    <a href="index.html">LayerZoo</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="container" style="padding: 40px 20px;">
+    <h1>Frequently Asked Questions</h1>
+    <div id="faq-content" class="main-content"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>LayerZoo — Bitcoin Layer 2 Education & Community</p>
+  </div>
+</footer>
+
+<!-- Libraries via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    // Load and render FAQ from markdown
+    fetch('faq-content.md')
+      .then(response => response.text())
+      .then(md => {
+        const html = marked.parse(md, { gfm: true, breaks: true });
+        document.getElementById('faq-content').innerHTML = html;
+        hljs.highlightAll();
+
+        // Make h2 collapsible for better UX
+        const faqContent = document.getElementById('faq-content');
+        const headings = faqContent.querySelectorAll('h2');
+        headings.forEach(heading => {
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          summary.innerHTML = heading.innerHTML;
+          heading.replaceWith(details);
+          details.appendChild(summary);
+          // Move following content into details until next h2
+          let sibling = summary.parentNode.nextSibling;
+          while (sibling && sibling.tagName !== 'H2') {
+            const next = sibling.nextSibling;
+            details.appendChild(sibling);
+            sibling = next;
+          }
+        });
+      })
+      .catch(err => {
+        document.getElementById('faq-content').innerHTML = '<p>Error loading FAQ content.</p>';
+      });
+</script>
+
+</body>
+</html>

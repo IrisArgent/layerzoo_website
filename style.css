@@ -1,0 +1,176 @@
+/* Cohesive Dark Theme for LayerZoo Educational Site */
+/* Uniform menu and layout - fixes spacing on home and layout on FAQ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Uniform Top Navigation - consistent across all pages */
+.topnav {
+  background: #111;
+  padding: 1rem 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topnav a {
+  color: #ddd;
+  margin: 8px 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.topnav a:hover {
+  color: #22c55e;
+}
+
+.topnav .icon {
+  display: none;
+  cursor: pointer;
+  color: #ddd;
+  font-size: 1.8rem;
+  margin-left: auto;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+  }
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topnav.responsive a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+/* Hero and Content */
+.hero {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.hero h1 {
+  color: #22c55e;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #222;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.button {
+  background: #22c55e;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  border-top: 1px solid #222;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* FAQ specific */
+.descriptionDiv, #faq-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+details {
+  background: #1a1a1a;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px;
+}
+
+#faq-content h1, #faq-content h2 {
+  color: #22c55e;
+}
+
+/* Educator Blueprint enhancements */
+.decision-tree {
+  background: #111;
+  border: 2px solid #22c55e;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 40px 0;
+}
+
+/* Ensure consistent spacing */
+h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  color: #22c55e;
+}
+
+a:hover {
+  text-decoration: underline;
+}

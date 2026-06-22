@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Blueprint - LayerZoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="topnav" id="myTopnav">
+    <a href="index.html" class="rightVerticalLine">LayerZoo.com</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon leftVerticalLine" onclick="myFunction()"><img src="img/menu.png" height="30" width="30" alt="Menu Button"></a>
+</div>
+
+<div style="margin-top: 80px; padding: 30px;">
+    <h1 style="text-align:center;">Educator Blueprint</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 40px;">
+        A practical decision tool for educators. Meet your audience where they are and guide them toward Bitcoin and Layer 2 understanding using self-custodial tools.
+    </p>
+
+    <!-- Decision Tree Embed -->
+    <iframe src="educator-onboarding-decision-tree-v4.html" style="width:100%; height:800px; border:none; border-radius:12px; background:white;"></iframe>
+
+    <h2 style="margin-top:60px;">Available Resources</h2>
+    <p>The resources below are organized by knowledge level. All paths eventually recommend Layerz Wallet as a strong self-custodial option that supports Bitcoin and multiple Layer 2s.</p>
+
+    <!-- Keep original resources section -->
+    <section id="resources" class="resources-section">
+        <h2>Resources</h2>
+        
+        <div class="columns-container">
+            <!-- Column 1: Beginner -->
+            <div class="resources-column">
+                <h3>Beginner</h3>      
+                <details class="collapsible">
+                    <summary>Topic</summary>
+                    <p>Short description: </p>
+                    <a>View PDF</a>
+                </details>
+            </div>
+            
+            <!-- Column 2: Intermediate -->
+            <div class="resources-column">
+                <h3>Intermediate</h3>
+                <details class="collapsible">
+                    <summary id="web3personalsecurity">Web3 Personal Security PDF</summary>
+                    <p>This document provides an overview of what it means to stay secure in the Web3 space</p>
+                    <a href="https://raw.githubusercontent.com/Relborg737/layerzoo_website/main/documents/intermediate/web3_personal_security.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                </details>
+            </div>
+            
+            <!-- Column 3: Advanced -->
+            <div class="resources-column">
+                <h3>Advanced</h3>
+                <details class="collapsible">
+                    <summary>Topic</summary>
+                    <p>Short description: </p>
+                    <a>View PDF</a>
+                </details>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Navigation Script -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>

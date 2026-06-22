@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayerZoo - Bitcoin Layer 2 Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Uniform navigation - fixes menu spacing issue -->
+<div class="topnav" id="myTopnav">
+    <a href="index.html">LayerZoo</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="hero">
+    <div class="container">
+        <h1>LayerZoo</h1>
+        <p style="font-size: 1.4rem; max-width: 700px; margin: 20px auto;">Exploring Bitcoin and its Layer 2s through stories, collections, and education.</p>
+        <a href="educator-blueprint.html" class="button">Browse Educator Resources</a>
+    </div>
+</div>
+
+<div class="container" style="padding: 60px 20px;">
+    <h2 style="text-align:center; margin-bottom: 40px;">Collections</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <!-- Colaso Collection (preserved) -->
+        <a href="collection_colaso.html" class="card" style="text-decoration: none;">
+            <img src="img/collection/colaso/lz-colaso-1.png" alt="Colaso" style="width:100%; border-radius: 12px;">
+            <div style="padding: 20px;">
+                <div style="color: #22c55e; font-size: 0.9rem; font-weight: 600;">MEMBER COLLECTION</div>
+                <h3>Colaso</h3>
+                <p>Launch Collection – 99 unique pieces</p>
+            </div>
+        </a>
+        
+        <!-- Other collections as placeholders (preserved) -->
+        <div class="card">
+            <img src="img/placeh.png" alt="Bitcoin" style="width:100%; border-radius: 12px;">
+            <div style="padding: 20px;">
+                <div style="color: #22c55e; font-size: 0.9rem; font-weight: 600;">OFFICIAL</div>
+                <h3>Bitcoin</h3>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="img/placeh.png" alt="Stacks" style="width:100%; border-radius: 12px;">
+            <div style="padding: 20px;">
+                <div style="color: #22c55e; font-size: 0.9rem; font-weight: 600;">OFFICIAL</div>
+                <h3>Stacks</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>LayerZoo — Bitcoin Layer 2 Education & Community</p>
+        <p style="margin-top: 10px;">
+            <a href="https://twitter.com/LayerZoo" style="margin: 0 10px;">Twitter</a>
+            <a href="https://t.me/layerzoo" style="margin: 0 10px;">Telegram</a>
+        </p>
+        <p style="margin-top: 30px; font-size: 0.9rem;">Layerz Wallet is a recommended self-custodial wallet that supports all these layers.</p>
+    </div>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>

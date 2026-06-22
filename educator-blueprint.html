@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Blueprint - LayerZoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Uniform navigation -->
+<div class="topnav" id="myTopnav">
+    <a href="index.html">LayerZoo</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="container" style="padding: 40px 20px;">
+    <h1>Educator Blueprint</h1>
+    <p style="font-size: 1.1rem; max-width: 800px;">Practical resources and decision tools for educators teaching Bitcoin and Layer 2 technologies.</p>
+
+    <!-- Inline Decision Tree (no iframe per project rules) -->
+    <div class="decision-tree">
+        <h2 style="color: #22c55e; text-align: center; margin-bottom: 30px;">Onboarding Decision Tree</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Start by assessing your audience and follow the suggested teaching sequence for best results.</p>
+        
+        <div style="background: #1a1a1a; padding: 20px; border-radius: 12px; margin: 20px 0;">
+            <strong>Start by assessing your audience:</strong><br><br>
+            • What is their current knowledge of Bitcoin?<br>
+            • What is their main goal or need?<br>
+            • What is their geographic/economic context?
+        </div>
+
+        <div style="margin: 30px 0;">
+            <strong>Common Path 1: Complete Beginners in high-inflation regions</strong><br><br>
+            <strong>Suggested teaching sequence:</strong><br>
+            1. Begin with why sound money matters using local currency examples<br>
+            2. Introduce stable value on Bitcoin rails first<br>
+            3. Demonstrate self-custody using a reliable wallet such as Layerz Wallet<br>
+            4. Gradually introduce native Bitcoin and Layer 2 concepts
+        </div>
+
+        <div style="margin: 30px 0;">
+            <strong>Common Path 2: Users who know other cryptocurrencies</strong><br><br>
+            <strong>Suggested teaching sequence:</strong><br>
+            1. Acknowledge their experience with other chains<br>
+            2. Highlight Bitcoin's unique properties as the base layer<br>
+            3. Show practical Layer 2 solutions (Lightning, Ark, Spark, etc.)<br>
+            4. Demonstrate tools that work well across layers
+        </div>
+
+        <div style="margin: 30px 0;">
+            <strong>Common Path 3: Ideologically driven audience</strong><br><br>
+            <strong>Suggested teaching sequence:</strong><br>
+            1. Focus on sovereignty, self-custody, and Bitcoin as hard money<br>
+            2. Cover security best practices and avoiding third parties<br>
+            3. Introduce advanced Layer 2 capabilities (BitVM, etc.)
+        </div>
+
+        <p style="text-align: center; color: #666; margin-top: 40px; font-size: 0.95rem;">
+            This decision tree is designed to be a living document. Each path can be expanded with full lesson plans, slide decks, and visual aids.
+        </p>
+    </div>
+
+    <h2 style="margin-top: 60px;">Teaching Resources</h2>
+    <p>Organized by knowledge level. These materials are designed to help educators onboard new users effectively.</p>
+
+    <section id="resources">
+        <h3>Beginner Resources</h3>
+        <p>Coming soon...</p>
+        
+        <h3>Intermediate Resources</h3>
+        <details>
+            <summary>Web3 Personal Security</summary>
+            <a href="https://raw.githubusercontent.com/Relborg737/layerzoo_website/main/documents/intermediate/web3_personal_security.pdf" target="_blank">Download PDF</a>
+        </details>
+        
+        <h3>Advanced Resources</h3>
+        <p>Coming soon...</p>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>LayerZoo — Bitcoin Layer 2 Education & Community</p>
+    </div>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>
