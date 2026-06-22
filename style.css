@@ -1,77 +1,105 @@
-/* Cohesive Modern Style with Limited Width */
+/* Standardized Cohesive Style - Uniform Margins and Menu */
 body {
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #0a0a0a;
-    color: #e0e0e0;
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.7;
-    font-size: 1.05rem;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
+/* Uniform Top Navigation - Same on ALL pages */
 .topnav {
-    background: #111;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #222;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: #111;
+  padding: 1rem 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .topnav a {
-    color: #ddd;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 500;
+  color: #ddd;
+  margin: 0 16px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .topnav a:hover {
-    color: #22c55e;
+  color: #22c55e;
 }
 
+.topnav .icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu - Consistent on ALL pages */
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topnav.responsive a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+/* Consistent Content Margins */
+.main-content, section, div[style*="margin"] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Cards and Buttons */
 .card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid #222;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  border: 1px solid #222;
 }
 
 .button {
-    background: #22c55e;
-    color: black;
-    padding: 12px 28px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
+  background: #22c55e;
+  color: black;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .button:hover {
-    background: white;
+  background: white;
 }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-    border-top: 1px solid #222;
-    margin-top: 60px;
-}
-
-/* Mobile Menu Consistency */
-.topnav.responsive {
-    flex-direction: column;
-}
-
-.topnav.responsive a {
-    margin: 10px 0;
+  text-align: center;
+  padding: 60px 24px 40px;
+  color: #666;
+  border-top: 1px solid #222;
+  margin-top: 80px;
 }
