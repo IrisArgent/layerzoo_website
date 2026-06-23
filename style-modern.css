@@ -40,4 +40,4 @@ details summary { cursor: pointer; font-weight: 600; color: #22c55e; }
   .topnav.responsive { position: relative; }
   .topnav.responsive a { float: none; display: block; text-align: left; }
   .topnav.responsive .icon { position: absolute; right: 0; top: 0; }
-}
+}<script>function toggleMenu() { var x = document.getElementById("mainNav"); if (x.className === "topnav") { x.className += " responsive"; } else { x.className = "topnav"; } }</script>
