@@ -1,112 +1,42 @@
-<!-- SITE UPDATED JUNE 23 - MENU FIXED - VISIBLE BANNER -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - LayerZoo</title>
-  <link rel="stylesheet" href="style.css"> <!-- Your existing CSS -->
-  <!-- Optional: for code highlighting in FAQ answers (if you have code snippets) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-</head>
-<body>
-<!-- SITE UPDATED JUNE 23 - MENU FIXED - VISIBLE BANNER -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LayerZoo - Bitcoin Layer 2 Education</title>
+    <title>FAQ - LayerZoo</title>
     <link rel="stylesheet" href="style-modern.css">
 </head>
 <body>
+
 <nav id="mainNav" class="topnav" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; background: #0a0a0a; border-bottom: 1px solid #222;">
-    <a href="index.html" style="color:#22c55e;font-weight:600;">LayerZoo</a>
+    <a href="index.html">LayerZoo</a>
     <a href="educator-blueprint.html">Educator Blueprint</a>
     <a href="educator-toolkits.html">Educator Toolkits</a>
     <a href="competitions.html">Competitions</a>
-    <a href="faq.html">FAQ</a><span style="color:#22c55e;font-weight:600;"></span>
+    <a href="faq.html" style="color:#22c55e;font-weight:600;">FAQ</a>
     <a href="about.html">About</a>
     <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="float:right; font-size:28px; padding:10px 15px;">≡</a>
 </nav>
-<div class="hero">
-    <h1>LayerZoo</h1>
-    <p style="font-size: 1.4rem; max-width: 700px; margin: 20px auto;">Exploring Bitcoin and its Layer 2s through stories, collections, and education.</p>
-    <a href="educator-blueprint.html" class="button">Browse Educator Resources</a>
+
+<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
+    <h1>Frequently Asked Questions</h1>
+    
+    <div style="background: #111; border-radius: 16px; padding: 30px; margin: 30px 0;">
+        <h2>What is LayerZoo?</h2>
+        <p>An educational hub for Bitcoin and Layer 2 technologies, combining stories, collections, toolkits, and community resources.</p>
+    </div>
+    
+    <div style="background: #111; border-radius: 16px; padding: 30px; margin: 30px 0;">
+        <h2>How do I use the Educator Toolkits?</h2>
+        <p>Start with the <a href="educator-blueprint.html">Educator Blueprint decision tree</a> to identify your audience, then download the matching kit from the shared Google Drive folder.</p>
+    </div>
+    
+    <div style="background: #111; border-radius: 16px; padding: 30px; margin: 30px 0;">
+        <h2>Is the Colaso collection still available?</h2>
+        <p>Yes. The Colaso collection and competition are preserved and can be viewed <a href="collection_colaso.html">here</a>.</p>
+    </div>
 </div>
 
-<div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align:center; margin-bottom: 40px;">Collections</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-        <!-- Colaso Collection (preserved) -->
-  <!-- Main content -->
-  <div class="descriptionDiv"> <!-- Or your main container class -->
-    <h1>Frequently Asked Questions</h1>
-    <div id="faq-content"></div>
-  </div>
-
-  <!-- Libraries via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-  <script>
-    // Responsive nav toggle (add if not already in your pages)
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-
-    // Load and render FAQ
-  fetch('faq-content.md')
-    .then(response => response.text())
-    .then(md => {
-      const html = marked.parse(md, { gfm: true, breaks: true });
-      document.getElementById('faq-content').innerHTML = html;
-      hljs.highlightAll();  // If using code highlighting
-
-      // Collapsible questions (h2 under h1 categories)
-      const faqContent = document.getElementById('faq-content');
-      const headings = faqContent.querySelectorAll('h1, h2');
-      headings.forEach(heading => {
-        if (heading.tagName === 'H2') {
-          const details = document.createElement('details');
-          const summary = document.createElement('summary');
-          summary.innerHTML = heading.innerHTML;
-          heading.replaceWith(details);
-          details.appendChild(summary);
-          let next = details.nextSibling;
-          while (next && next.tagName !== 'H1' && next.tagName !== 'H2') {
-            details.appendChild(next);
-            next = details.nextSibling;
-          }
-        }
-      });
-
-      // NEW: Accordion behavior - only one open at a time
-      document.querySelectorAll('details').forEach(detail => {
-        detail.addEventListener('toggle', function() {
-          if (this.open) {
-            document.querySelectorAll('details').forEach(other => {
-              if (other !== this) {
-                other.open = false;
-              }
-            });
-          }
-        });
-      });
-    })
-      .catch(error => {
-        console.error('Error loading FAQ:', error);
-        document.getElementById('faq-content').innerHTML = '<p>Error loading FAQ. Please try again later.</p>';
-      });
-  </script>
-<script src="menu.js"></script>
 <script src="menu.js"></script>
 </body>
 </html>
-<script src="static-menu.js"></script>
