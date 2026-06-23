@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educator Blueprint - LayerZoo</title>
     <link rel="stylesheet" href="style-modern.css">
+    <style>
+        .tree { background: #111; border: 2px solid #22c55e; border-radius: 16px; padding: 40px; margin: 40px 0; }
+        .step { background: #1a1a1a; border-left: 4px solid #22c55e; padding: 20px; margin: 20px 0; }
+        .step h3 { color: #22c55e; margin-top: 0; }
+    </style>
 </head>
 <body>
 
@@ -20,16 +25,47 @@
 
 <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
     <h1>Educator Blueprint</h1>
-    <p style="font-size: 1.1rem; max-width: 800px;">Practical resources and decision tools for educators teaching Bitcoin and Layer 2 technologies.</p>
+    <p style="font-size: 1.2rem; max-width: 800px; color: #ddd;">A decision tree to help educators choose the right starting point and tools for teaching Bitcoin and Layer 2 technologies.</p>
 
-    <div style="background: #111; border: 2px solid #22c55e; border-radius: 16px; padding: 40px; margin: 40px 0;">
-        <h2 style="color: #22c55e; text-align: center; margin-bottom: 30px;">Onboarding Decision Tree</h2>
-        <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Start by assessing your audience and follow the suggested teaching sequence for best results.</p>
+    <div class="tree">
+        <h2 style="text-align: center; color: #22c55e; margin-bottom: 40px;">Onboarding Decision Tree</h2>
         
-        <!-- Decision tree content would go here - preserved from previous versions -->
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="educator-toolkits.html" class="button" style="background:#22c55e;color:#000;padding:15px 30px;border-radius:8px;text-decoration:none;">Go to Educator Toolkits</a>
+        <div class="step">
+            <h3>Step 1: Who is your audience?</h3>
+            <ul>
+                <li><strong>Complete beginners / general public</strong> → Start with "Bitcoin as Sound Money (Beginner)" toolkit</li>
+                <li><strong>Parents or students</strong> → Use "Self-Custody Essentials" toolkit</li>
+                <li><strong>Developers or technical users</strong> → Go to "Practical Layer 2 Exploration" toolkit</li>
+                <li><strong>Advanced users or institutions</strong> → Use "Advanced Sovereignty & BitVM" toolkit</li>
+            </ul>
         </div>
+        
+        <div class="step">
+            <h3>Step 2: What is their current knowledge level?</h3>
+            <ul>
+                <li>No prior knowledge → Begin with the beginner kit + decision tree walkthrough</li>
+                <li>Basic understanding of Bitcoin → Jump to Layer 2 focused kits</li>
+                <li>Experienced with self-custody → Focus on advanced sovereignty and BitVM materials</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h3>Step 3: What is the goal?</h3>
+            <ul>
+                <li>Basic financial literacy → Sound Money kit</li>
+                <li>Self-sovereignty and security → Self-Custody kit</li>
+                <li>Hands-on Layer 2 experience → Practical Layer 2 kit</li>
+                <li>Deep technical understanding → Advanced Sovereignty kit</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="https://drive.google.com/drive/folders/1aTThHXzmvLdcudSItUXOn2AmfJSjNzwv" target="_blank" class="button" style="background:#22c55e;color:#000;padding:18px 36px;font-size:1.1rem;">
+                Open All Toolkits in Google Drive (Copy or Download)
+            </a>
+        </div>
+        
+        <p style="text-align: center; color: #888; font-size: 0.95rem;">Follow the path that matches your audience and goals. All kits are modular and can be mixed. The decision tree is designed to meet users where they are.</p>
     </div>
 </div>
 
