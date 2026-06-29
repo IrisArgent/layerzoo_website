@@ -4,129 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educator Blueprint - LayerZoo</title>
-    <link rel="stylesheet" href="style-modern.css">
-    <style>
-        .tree { background: #111; border: 2px solid #22c55e; border-radius: 16px; padding: 40px; margin: 40px 0; max-width: 900px; }
-        .question { margin: 30px 0; }
-        .options { display: flex; flex-direction: column; gap: 12px; }
-        .option { padding: 12px 20px; background: #1a1a1a; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
-        .option:hover { background: #222; }
-        .option.selected { background: #052e16; border: 2px solid #22c55e; }
-        .result { margin-top: 40px; padding: 30px; background: #052e16; border-radius: 12px; display: none; }
-        .button { background:#22c55e;color:#000;padding:15px 30px;border-radius:8px;text-decoration:none;display:inline-block;margin:20px 0;font-weight:600; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav id="mainNav" class="topnav" style="max-width: 960px; margin: 0 auto; padding: 0 20px; background: #0a0a0a; border-bottom: 1px solid #222;">
-    <a href="index.html">LayerZoo</a>
-    <a href="educator-blueprint.html" style="color:#22c55e;font-weight:600;">Educator Blueprint</a>
-    <a href="educator-toolkits.html">Educator Toolkits</a>
+<!-- Navigation Bar -->
+<div class="topnav" id="myTopnav">
+    <a href="index.html" class="rightVerticalLine">LayerZoo.com</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
     <a href="competitions.html">Competitions</a>
     <a href="faq.html">FAQ</a>
     <a href="about.html">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="float:right; font-size:28px; padding:10px 15px;">≡</a>
-</nav>
+    <a href="javascript:void(0);" class="icon leftVerticalLine" onclick="myFunction()"><img src="img/menu.png" height="30" width="30" alt="Menu Button"></a>
+</div>
 
-<div class="container" style="max-width: 960px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+<div style="margin-top: 80px; padding: 30px; max-width: 1100px; margin-left: auto; margin-right: auto;">
     <h1>Educator Blueprint</h1>
-    <p style="font-size: 1.2rem; max-width: 800px; margin: 30px auto; color: #ddd;">The Educator Blueprint is a practical decision tree designed for Bitcoin educators to quickly identify their audience's needs and select the most effective teaching kits. Use the interactive questions below to get a personalized recommendation, then open the corresponding toolkit in Google Drive to copy or download the materials. The intended outcome is to make Bitcoin and Layer 2 education accessible, engaging, and effective for educators of all levels.</p>
+    <p style="font-size: 1.1rem; margin-bottom: 40px;">Practical resources and decision tools for educators teaching Bitcoin and Layer 2 technologies.</p>
 
-    <div class="tree" id="tree" style="margin: 40px auto;">
-        <div id="q1" class="question">
-            <h3>Step 1: Who is your audience?</h3>
-            <div class="options">
-                <div class="option" onclick="selectOption(1, this, 'beginner')">Complete beginners / general public</div>
-                <div class="option" onclick="selectOption(1, this, 'parents')">Parents or students</div>
-                <div class="option" onclick="selectOption(1, this, 'developers')">Developers or technical users</div>
-                <div class="option" onclick="selectOption(1, this, 'advanced')">Advanced users or institutions</div>
-            </div>
-        </div>
+    <!-- Decision Tree v6 (neutral version) -->
+    <iframe src="educator-onboarding-decision-tree-v6.html" style="width:100%; height:820px; border:1px solid #333; border-radius: 12px; background: #fafafa;"></iframe>
 
-        <div id="q2" class="question" style="display:none;">
-            <h3>Step 2: What is their current knowledge level?</h3>
-            <div class="options">
-                <div class="option" onclick="selectOption(2, this, 'none')">No prior knowledge</div>
-                <div class="option" onclick="selectOption(2, this, 'basic')">Basic understanding of Bitcoin</div>
-                <div class="option" onclick="selectOption(2, this, 'experienced')">Experienced with self-custody</div>
-            </div>
-        </div>
+    <h2 style="margin-top: 60px;">Teaching Resources</h2>
+    <p>Organized by knowledge level. These materials are designed to help educators onboard new users effectively.</p>
 
-        <div id="q3" class="question" style="display:none;">
-            <h3>Step 3: What is the goal?</h3>
-            <div class="options">
-                <div class="option" onclick="selectOption(3, this, 'literacy')">Basic financial literacy</div>
-                <div class="option" onclick="selectOption(3, this, 'security')">Self-sovereignty and security</div>
-                <div class="option" onclick="selectOption(3, this, 'hands-on')">Hands-on Layer 2 experience</div>
-                <div class="option" onclick="selectOption(3, this, 'technical')">Deep technical understanding</div>
-            </div>
-        </div>
-
-        <div id="result" class="result">
-            <h2>Your Recommended Kit</h2>
-            <p id="recommendation" style="font-size:1.3rem;"></p>
-            <a id="driveLink" href="#" target="_blank" class="button">Open Recommended Kit in Google Drive</a>
-            <p style="margin-top:30px;color:#888;">This recommendation is based on the Educator Blueprint decision tree. All kits are modular.</p>
-        </div>
-    </div>
-
-    <div style="text-align: center; margin: 50px 0;">
-        <a href="https://drive.google.com/file/d/1tCNg1lxU-rSLTnqDoFsqu83Mz4pTCbI-/view?usp=drivesdk" target="_blank" class="button" style="background:#22c55e;color:#000;padding:18px 36px;font-size:1.1rem;">
-            Download Printable PDF Flow Chart of the Decision Tree
-        </a>
-    </div>
+    <!-- Original resources section preserved -->
+    <section id="resources">
+        <h3>Beginner Resources</h3>
+        <p>Coming soon...</p>
+        
+        <h3>Intermediate Resources</h3>
+        <details>
+            <summary>Web3 Personal Security</summary>
+            <a href="https://raw.githubusercontent.com/Relborg737/layerzoo_website/main/documents/intermediate/web3_personal_security.pdf" target="_blank">Download PDF</a>
+        </details>
+        
+        <h3>Advanced Resources</h3>
+        <p>Coming soon...</p>
+    </section>
 </div>
 
 <script>
-let answers = {};
-
-function selectOption(question, element, value) {
-  answers[question] = value;
-  element.classList.add('selected');
-  
-  if (question === 1) document.getElementById('q2').style.display = 'block';
-  if (question === 2) document.getElementById('q3').style.display = 'block';
-  if (question === 3) showRecommendation();
-}
-
-function showRecommendation() {
-  let rec = '';
-  let link = '';
-  
-  const audience = answers[1];
-  const level = answers[2];
-  const goal = answers[3];
-  
-  if (audience === 'beginner' || goal === 'literacy') {
-    rec = '1. Bitcoin as Sound Money (Beginner)';
-    link = 'https://drive.google.com/drive/folders/16cYTozNGvLjaOJfQjzr6pvkx95kiw31P';
-  } else if (audience === 'parents' || goal === 'security') {
-    rec = '2. Self-Custody Essentials';
-    link = 'https://drive.google.com/drive/folders/1p5vhHZoJT0C5M7KTZxkLdm4xx8c2YjTu';
-  } else if (audience === 'developers' || goal === 'hands-on') {
-    rec = '3. Practical Layer 2 Exploration';
-    link = 'https://drive.google.com/drive/folders/1qbhn9bWN46nyZFOWr2AbBNCg_wm1Gky7';
-  } else {
-    rec = '4. Advanced Sovereignty & BitVM';
-    link = 'https://drive.google.com/drive/folders/1CxPF2IJ9cOC99SC2-ehWGwDfOJ30U1ll';
-  }
-  
-  document.getElementById('recommendation').innerHTML = `Recommended: <strong>${rec}</strong>`;
-  document.getElementById('driveLink').href = link;
-  document.getElementById('result').style.display = 'block';
-}
-
-function toggleMenu() {
-  var x = document.getElementById("mainNav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
 </script>
 
-<!-- Last updated: 2026-06-25 -->
-<script src="ga-tracking.js"></script>
 </body>
 </html>

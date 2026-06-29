@@ -1,292 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - LayerZoo</title>
-    <link rel="stylesheet" href="style-modern.css">
-    <style>
-        details { background: #111; margin: 15px 0; border-radius: 8px; overflow: hidden; }
-        summary { padding: 20px; font-weight: 600; cursor: pointer; background: #1a1a1a; }
-        .answer { padding: 20px; }
-        .jargon-search { width: 100%; padding: 15px; margin-bottom: 30px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #ddd; font-size: 1rem; }
-        .jargon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .jargon-card { background: #1a1a1a; padding: 20px; border-radius: 8px; }
-        .jargon-term { color: #22c55e; font-weight: 600; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - LayerZoo</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your existing CSS -->
+  <!-- Optional: for code highlighting in FAQ answers (if you have code snippets) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
 </head>
 <body>
-
-<nav id="mainNav" class="topnav" style="max-width: 960px; margin: 0 auto; padding: 0 20px; background: #0a0a0a; border-bottom: 1px solid #222;">
-    <a href="index.html">LayerZoo</a>
-    <a href="educator-blueprint.html">Educator Blueprint</a>
-    <a href="educator-toolkits.html">Educator Toolkits</a>
+  <!-- Header with topnav (copy from your other pages if needed) -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="educator-blueprint.html">Blueprint</a>
     <a href="competitions.html">Competitions</a>
-    <a href="faq.html" style="color:#22c55e;font-weight:600;">FAQ</a>
-    <a href="about.html">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="float:right; font-size:28px; padding:10px 15px;">≡</a>
-</nav>
+    <a href="faq.html">FAQ</a>
+    <!-- Add other links as needed -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
 
-<div class="container" style="max-width: 960px; margin: 0 auto; padding: 40px 20px; text-align: center;">
+  <!-- Main content -->
+  <div class="descriptionDiv"> <!-- Or your main container class -->
     <h1>Frequently Asked Questions</h1>
-    <p style="font-size: 1.2rem; max-width: 800px; margin: 30px auto; color: #ddd;">Common questions about LayerZoo, Bitcoin education, Layer 2, self-custody, and the toolkits. Only one question is expanded at a time. The Jargon Buster is below with 50 terms and a search box.</p>
+    <div id="faq-content"></div>
+  </div>
 
-    <h2 style="color:#22c55e;margin-top:40px;">Frequently Asked Questions</h2>
-    
-    <details open>
-        <summary>What is LayerZoo?</summary>
-        <div class="answer">LayerZoo is an open-source educational hub for Bitcoin and Layer 2 technologies. It provides educators with toolkits, decision trees, and resources while allowing self-learners to explore collections, stories, and practical activities.</div>
-    </details>
-    
-    <details>
-        <summary>How do I use the Educator Blueprint decision tree?</summary>
-        <div class="answer">Start with the interactive questions on the Educator Blueprint page. It will recommend the most suitable toolkit based on your audience, knowledge level, and goals. All kits are in the shared Google Drive.</div>
-    </details>
-    
-    <details>
-        <summary>Are the toolkits free?</summary>
-        <div class="answer">Yes. All kits are available in our shared Google Drive with read-only access. You can copy the folders to your own Drive or download them as ZIP for free.</div>
-    </details>
-    
-    <details>
-        <summary>What is the Colaso collection?</summary>
-        <div class="answer">The Colaso collection is a preserved member collection of 99 unique pieces. It is part of the competitions and educational content on the site and remains fully available.</div>
-    </details>
-    
-    <details>
-        <summary>Is Layerz Wallet the only recommended wallet?</summary>
-        <div class="answer">No. Layerz Wallet is one of several good self-custodial options that supports Bitcoin and multiple Layer 2 protocols in a single app. It is recommended in the kits for its ease of use.</div>
-    </details>
-    
-    <details>
-        <summary>How can I contribute to LayerZoo?</summary>
-        <div class="answer">See the CONTRIBUTING.md file in the GitHub repository. We welcome lesson plans, slide decks, jargon explanations, and improvements to the decision tree or toolkits.</div>
-    </details>
-    
-    <details>
-        <summary>What is self-custody?</summary>
-        <div class="answer">Holding your own private keys instead of using a third-party service. "Not your keys, not your coins." It gives you true ownership and protection from hacks or freezes.</div>
-    </details>
-    
-    <details>
-        <summary>What is a seed phrase?</summary>
-        <div class="answer">A list of 12-24 random words that can recover your wallet. Never share it or store it online. It is your master backup.</div>
-    </details>
-    
-    <details>
-        <summary>What is the Lightning Network?</summary>
-        <div class="answer">A Layer 2 solution for fast, cheap Bitcoin payments. Transactions happen off-chain in payment channels and the final balance is settled on the main chain.</div>
-    </details>
-    
-    <details>
-        <summary>What is BitVM?</summary>
-        <div class="answer">A virtual machine that allows complex computation on Bitcoin without changing the base protocol. It uses fraud proofs and is a major step for Bitcoin DeFi and advanced applications.</div>
-    </details>
-    
-    <details>
-        <summary>How do I generate a PDF from the kits?</summary>
-        <div class="answer">Open the Markdown file in the Google Drive folder, then File → Download → PDF. Or print the page and save as PDF.</div>
-    </details>
-    
-    <details>
-        <summary>Can I modify the kits?</summary>
-        <div class="answer">Yes. Copy the folder to your own Drive and edit as needed. The materials are modular and designed to be adapted by educators.</div>
-    </details>
-    
-    <details>
-        <summary>What is the Educator Blueprint for?</summary>
-        <div class="answer">It is a decision tree that helps educators assess their audience's knowledge level, goals, and context to choose the most effective toolkit and teaching sequence.</div>
-    </details>
-    
-    <details>
-        <summary>Are there more kits coming?</summary>
-        <div class="answer">Yes. The series is designed to grow. The 4 current kits cover beginner to advanced. More will be added based on community feedback.</div>
-    </details>
-    
-    <details>
-        <summary>How do the NFT series fit in?</summary>
-        <div class="answer">The NFT series for each collection will provide visual, engaging ways for self-learners to explore the different layers through art and stories.</div>
-    </details>
-    
-    <details>
-        <summary>Is the site open source?</summary>
-        <div class="answer">Yes. The full code is on GitHub at Relborg737/layerzoo_website. Contributions are welcome through the fork and PR process.</div>
-    </details>
-    
-    <details>
-        <summary>What is a node?</summary>
-        <div class="answer">A computer that validates and relays Bitcoin transactions, helping to keep the network decentralized.</div>
-    </details>
-    
-    <details>
-        <summary>What is hashrate?</summary>
-        <div class="answer">The total computational power securing the Bitcoin network. Higher hashrate means more security.</div>
-    </details>
-    
-    <details>
-        <summary>What is a hard fork?</summary>
-        <div class="answer">A backward-incompatible change to the Bitcoin protocol that creates a new chain (e.g. Bitcoin Cash).</div>
-    </details>
-    
-    <details>
-        <summary>What is a soft fork?</summary>
-        <div class="answer">A backward-compatible upgrade to the Bitcoin protocol that does not create a new chain.</div>
-    </details>
-    
-    <details>
-        <summary>What is SegWit?</summary>
-        <div class="answer">Segregated Witness - a upgrade that increased block capacity, fixed transaction malleability, and improved scalability.</div>
-    </details>
-    
-    <details>
-        <summary>What is Taproot?</summary>
-        <div class="answer">An upgrade that improves privacy for complex scripts and multisig, making transactions look the same.</div>
-    </details>
-    
-    <details>
-        <summary>What is a DAO?</summary>
-        <div class="answer">Decentralized Autonomous Organization - a community governed by smart contracts on the blockchain.</div>
-    </details>
-    
-    <details>
-        <summary>What is a DEX?</summary>
-        <div class="answer">Decentralized Exchange - peer-to-peer trading without a central authority or custodian.</div>
-    </details>
-    
-    <details>
-        <summary>What is yield farming?</summary>
-        <div class="answer">Earning rewards by providing liquidity to DeFi protocols on Layer 2 platforms.</div>
-    </details>
-    
-    <details>
-        <summary>What is an oracle?</summary>
-        <div class="answer">A service that brings real-world data (e.g. prices, weather) to smart contracts on the blockchain.</div>
-    </details>
-    
-    <details>
-        <summary>What is a bridge?</summary>
-        <div class="answer">A mechanism to move assets between different blockchains (e.g. from Bitcoin to Rootstock).</div>
-    </details>
-    
-    <details>
-        <summary>What is a rollup?</summary>
-        <div class="answer">A Layer 2 that batches transactions and posts them to the main chain for security.</div>
-    </details>
-    
-    <details>
-        <summary>What is zero-knowledge?</summary>
-        <div class="answer">A proof that allows verification of a statement without revealing the underlying data.</div>
-    </details>
-    
-    <details>
-        <summary>What is RBF?</summary>
-        <div class="answer">Replace-By-Fee - the ability to replace a transaction with a higher-fee version to speed up confirmation.</div>
-    </details>
-    
-    <details>
-        <summary>What is CPFP?</summary>
-        <div class="answer">Child-Pays-For-Parent - using a child transaction with higher fees to incentivize the confirmation of a stuck parent transaction.</div>
-    </details>
-    
-    <details>
-        <summary>What are Ordinals?</summary>
-        <div class="answer">A protocol for assigning unique numbers to individual satoshis, enabling NFT-like collectibles on Bitcoin.</div>
-    </details>
-    
-    <details>
-        <summary>What are Runes?</summary>
-        <div class="answer">A Bitcoin-native fungible token standard that uses a new protocol for tokens on the Bitcoin blockchain.</div>
-    </details>
-    
-    <details>
-        <summary>What is BRC-20?</summary>
-        <div class="answer">An experimental fungible token standard on Bitcoin that uses the Ordinals protocol.</div>
-    </details>
-    
-    <h2 style="color:#22c55e;margin-top:60px;">Jargon Buster (Top 50 Terms)</h2>
-    <input type="text" id="jargonSearch" class="jargon-search" placeholder="Search jargon terms (e.g. 'halving', 'self-custody', 'lightning', 'bitvm', 'covenant')..." onkeyup="filterJargon()">
+  <!-- Libraries via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-    <div class="jargon-grid" id="jargonGrid">
-        <div class="jargon-card"><span class="jargon-term">Halving</span>: Event every 4 years where the Bitcoin block reward is cut in half, reducing new supply.</div>
-        <div class="jargon-card"><span class="jargon-term">Self-Custody</span>: Holding your own private keys instead of using a third-party service.</div>
-        <div class="jargon-card"><span class="jargon-term">Seed Phrase</span>: 12-24 word backup that can recover your wallet.</div>
-        <div class="jargon-card"><span class="jargon-term">Lightning Network</span>: Layer 2 solution for fast, cheap Bitcoin payments.</div>
-        <div class="jargon-card"><span class="jargon-term">Layer 2</span>: Scaling solutions built on top of Bitcoin for speed and lower fees.</div>
-        <div class="jargon-card"><span class="jargon-term">BitVM</span>: Virtual machine that allows complex computation on Bitcoin without changing the base protocol.</div>
-        <div class="jargon-card"><span class="jargon-term">Covenants</span>: Proposed Bitcoin scripting upgrades that allow more powerful transaction rules.</div>
-        <div class="jargon-card"><span class="jargon-term">Multisig</span>: Requires multiple signatures to spend Bitcoin (e.g. 2-of-3).</div>
-        <div class="jargon-card"><span class="jargon-term">Node</span>: Computer that validates and relays Bitcoin transactions.</div>
-        <div class="jargon-card"><span class="jargon-term">Hashrate</span>: Total computational power securing the Bitcoin network.</div>
-        <div class="jargon-card"><span class="jargon-term">Private Key</span>: Secret key that controls access to your Bitcoin.</div>
-        <div class="jargon-card"><span class="jargon-term">Public Key</span>: Shareable address derived from your private key.</div>
-        <div class="jargon-card"><span class="jargon-term">Wallet</span>: Software or hardware that manages your keys and transactions.</div>
-        <div class="jargon-card"><span class="jargon-term">Testnet</span>: Testing network for Bitcoin and Layer 2 without real money.</div>
-        <div class="jargon-card"><span class="jargon-term">Mainnet</span>: The live Bitcoin network with real value.</div>
-        <div class="jargon-card"><span class="jargon-term">UTXO</span>: Unspent Transaction Output - the model Bitcoin uses for tracking ownership.</div>
-        <div class="jargon-card"><span class="jargon-term">Block</span>: Group of transactions added to the blockchain every 10 minutes.</div>
-        <div class="jargon-card"><span class="jargon-term">Blockchain</span>: The public ledger of all Bitcoin transactions.</div>
-        <div class="jargon-card"><span class="jargon-term">Mining</span>: Process of securing the network and creating new Bitcoin.</div>
-        <div class="jargon-card"><span class="jargon-term">51% Attack</span>: If one miner controls more than 50% of hashrate, they could potentially rewrite history.</div>
-        <div class="jargon-card"><span class="jargon-term">Soft Fork</span>: Backward-compatible upgrade to the Bitcoin protocol.</div>
-        <div class="jargon-card"><span class="jargon-term">Hard Fork</span>: Backward-incompatible change that creates a new chain.</div>
-        <div class="jargon-card"><span class="jargon-term">SegWit</span>: Segregated Witness - upgrade that increased block capacity and fixed transaction malleability.</div>
-        <div class="jargon-card"><span class="jargon-term">Taproot</span>: Upgrade that improves privacy and enables more complex smart contracts.</div>
-        <div class="jargon-card"><span class="jargon-term">Lightning</span>: Layer 2 for fast, cheap, private Bitcoin payments.</div>
-        <div class="jargon-card"><span class="jargon-term">Ark</span>: Layer 2 focused on instant, private payments without channel management.</div>
-        <div class="jargon-card"><span class="jargon-term">Rootstock</span>: EVM-compatible smart contracts secured by Bitcoin merge-mining.</div>
-        <div class="jargon-card"><span class="jargon-term">Stacks</span>: Smart contracts tied to Bitcoin with sBTC coming soon.</div>
-        <div class="jargon-card"><span class="jargon-term">Citrea</span>: Zero-knowledge rollup for Bitcoin.</div>
-        <div class="jargon-card"><span class="jargon-term">sBTC</span>: Synthetic Bitcoin on Stacks for smart contract use.</div>
-        <div class="jargon-card"><span class="jargon-term">DeFi</span>: Decentralized Finance - lending, borrowing, trading without intermediaries.</div>
-        <div class="jargon-card"><span class="jargon-term">NFT</span>: Non-Fungible Token - unique digital asset on the blockchain.</div>
-        <div class="jargon-card"><span class="jargon-term">DAO</span>: Decentralized Autonomous Organization - community governed by smart contracts.</div>
-        <div class="jargon-card"><span class="jargon-term">DEX</span>: Decentralized Exchange - peer-to-peer trading without a central authority.</div>
-        <div class="jargon-card"><span class="jargon-term">Yield Farming</span>: Earning rewards by providing liquidity to DeFi protocols.</div>
-        <div class="jargon-card"><span class="jargon-term">Oracle</span>: Service that brings real-world data to smart contracts.</div>
-        <div class="jargon-card"><span class="jargon-term">Bridge</span>: Mechanism to move assets between different blockchains.</div>
-        <div class="jargon-card"><span class="jargon-term">Rollup</span>: Layer 2 that batches transactions and posts them to the main chain.</div>
-        <div class="jargon-card"><span class="jargon-term">Zero-Knowledge</span>: Proof that allows verification without revealing the underlying data.</div>
-        <div class="jargon-card"><span class="jargon-term">Covenant</span>: Bitcoin scripting upgrade that restricts how coins can be spent in the future.</div>
-        <div class="jargon-card"><span class="jargon-term">OP_CAT</span>: Proposed opcode that enables covenants by allowing concatenation of data.</div>
-        <div class="jargon-card"><span class="jargon-term">Vault</span>: Smart contract that protects funds with time-locks and recovery keys.</div>
-        <div class="jargon-card"><span class="jargon-term">CoinJoin</span>: Privacy technique that mixes multiple users' transactions to break linkability.</div>
-        <div class="jargon-card"><span class="jargon-term">Silent Payments</span>: Privacy upgrade that allows reusable payment codes without on-chain linkage.</div>
-        <div class="jargon-card"><span class="jargon-term">Taproot</span>: Upgrade that improves privacy for complex scripts and multisig.</div>
-        <div class="jargon-card"><span class="jargon-term">Schnorr Signatures</span>: Efficient signature scheme enabled by Taproot for better privacy and multisig.</div>
-        <div class="jargon-card"><span class="jargon-term">Mempool</span>: Pool of unconfirmed transactions waiting to be included in a block.</div>
-        <div class="jargon-card"><span class="jargon-term">RBF</span>: Replace-By-Fee - ability to replace a transaction with a higher-fee version.</div>
-        <div class="jargon-card"><span class="jargon-term">CPFP</span>: Child-Pays-For-Parent - using a child transaction to pay for a stuck parent transaction.</div>
-        <div class="jargon-card"><span class="jargon-term">Ordinals</span>: Protocol for assigning unique numbers to satoshis for NFT-like collectibles.</div>
-        <div class="jargon-card"><span class="jargon-term">Runes</span>: Bitcoin-native fungible tokens using a new protocol.</div>
-        <div class="jargon-card"><span class="jargon-term">BRC-20</span>: Experimental fungible token standard on Bitcoin using Ordinals.</div>
-    </div>
-</div>
-
-<script src="menu.js"></script>
-<script>
-function filterJargon() {
-  const searchTerm = document.getElementById('jargonSearch').value.toLowerCase();
-  const cards = document.querySelectorAll('.jargon-card');
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.style.display = text.includes(searchTerm) ? 'block' : 'none';
-  });
-}
-
-// Proper accordion - only one open at a time
-const details = document.querySelectorAll('details');
-details.forEach(detail => {
-  detail.addEventListener('toggle', function() {
-    if (this.open) {
-      details.forEach(otherDetail => {
-        if (otherDetail !== this) otherDetail.open = false;
-      });
+  <script>
+    // Responsive nav toggle (add if not already in your pages)
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  });
-});
-</script>
 
-<!-- Last updated: 2026-06-25 -->
-<script src="ga-tracking.js"></script>
+    // Load and render FAQ
+  fetch('faq-content.md')
+    .then(response => response.text())
+    .then(md => {
+      const html = marked.parse(md, { gfm: true, breaks: true });
+      document.getElementById('faq-content').innerHTML = html;
+      hljs.highlightAll();  // If using code highlighting
+
+      // Collapsible questions (h2 under h1 categories)
+      const faqContent = document.getElementById('faq-content');
+      const headings = faqContent.querySelectorAll('h1, h2');
+      headings.forEach(heading => {
+        if (heading.tagName === 'H2') {
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          summary.innerHTML = heading.innerHTML;
+          heading.replaceWith(details);
+          details.appendChild(summary);
+          let next = details.nextSibling;
+          while (next && next.tagName !== 'H1' && next.tagName !== 'H2') {
+            details.appendChild(next);
+            next = details.nextSibling;
+          }
+        }
+      });
+
+      // NEW: Accordion behavior - only one open at a time
+      document.querySelectorAll('details').forEach(detail => {
+        detail.addEventListener('toggle', function() {
+          if (this.open) {
+            document.querySelectorAll('details').forEach(other => {
+              if (other !== this) {
+                other.open = false;
+              }
+            });
+          }
+        });
+      });
+    })
+      .catch(error => {
+        console.error('Error loading FAQ:', error);
+        document.getElementById('faq-content').innerHTML = '<p>Error loading FAQ. Please try again later.</p>';
+      });
+  </script>
 </body>
 </html>
