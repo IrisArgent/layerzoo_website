@@ -3,58 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blueprint - LayerZoo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About - LayerZoo</title>
+    <link rel="stylesheet" href="style-modern.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
-        <div class="topnav" id="myTopnav">
-            <a href="index.html" class="rightVerticalLine">LayerZoo.com</a>
-            <a href="educator-blueprint.html">Educator Blueprint</a>
-            <a href="competitions.html">Competitions</a>
-            <a href="faq.html">FAQ</a>
-            <a href="about.html">About</a>
-            <a href="javascript:void(0);" class="icon leftVerticalLine" onclick="myFunction()"><img src="img/menu.png" height="30" width="30" alt="Menu Button" aria-label="Menu Button"></img>
-            </a>
-        </div>
+<nav id="mainNav" class="topnav" style="max-width: 960px; margin: 0 auto; padding: 0 20px; background: #0a0a0a; border-bottom: 1px solid #222;">
+    <a href="index.html">LayerZoo</a>
+    <a href="educator-blueprint.html">Educator Blueprint</a>
+    <a href="educator-toolkits.html">Educator Toolkits</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html" style="color:#22c55e;font-weight:600;">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="float:right; font-size:28px; padding:10px 15px;">≡</a>
+</nav>
 
-<div style="margin-top: 80px; padding: 20px; text-align: center;">
+<div class="container" style="max-width: 960px; margin: 0 auto; padding: 40px 20px; text-align: center;">
     <h1>About LayerZoo</h1>
-
-    <p>Welcome to LayerZoo, your ultimate educational hub for exploring Bitcoin and its Layer 2 solutions. We're dedicated to making complex blockchain concepts accessible and engaging through a unique blend of storytelling, curated collections, and community-driven resources.</p>
-
-    <div class="section">
+    <p style="font-size: 1.2rem; max-width: 800px; margin: 30px auto; color: #ddd;">LayerZoo is an open-source community project dedicated to Bitcoin education. It was created to help educators teach Bitcoin and Layer 2 technologies effectively while providing self-learners with high-quality resources. The ultimate goal is to grow a community around Layerz Wallet by making education the primary driver of adoption.</p>
+    
+    <div style="background: #111; border-radius: 16px; padding: 40px; max-width: 800px; margin: 40px auto; text-align: left;">
         <h2>Our Mission</h2>
-        <p>At LayerZoo, our core mission is to educate and empower individuals—especially educators—on Bitcoin and Layer 2 technologies. By providing tools and content that simplify learning, we aim to facilitate easier onboarding into the Bitcoin ecosystem, fostering a more informed and connected community.</p>
+        <p>To make Bitcoin and Layer 2 education accessible to everyone through practical toolkits, decision trees, competitions, and community contributions. We believe education is the most effective way to drive long-term adoption and Layerz Wallet downloads.</p>
     </div>
-
-    <div class="section">
-        <h2>What We Offer</h2>
-        <ul>
-            <li><strong>Engaging Stories</strong>: Immerse yourself in captivating narratives that break down Bitcoin and Layer 2 innovations in an approachable way.</li>
-            <li><strong>Themed Collections</strong>: Discover official collections highlighting key technologies like Bitcoin, Stacks, Lightning, Spark, Ark, Rootstock.</li>
-            <li><strong>Community Resources</strong>: Access valuable tools for building and growing your own Bitcoin-focused communities, including our active Telegram channel.</li>
-        </ul>
-        <p>Whether you're a beginner curious about blockchain or an educator looking to inspire others, LayerZoo is designed to support your journey.</p>
-    </div>
-
-    <div class="section">
-        <h2>Join the Conversation</h2>
-        <p>Stay connected by following us on X at <a href="https://x.com/LayerZoo">@LayerZoo</a> and joining our <a href="https://t.me/LayerZoo">Telegram channel</a>. Together, let's unlock the potential of Bitcoin and beyond!</p>
+    
+    <div style="background: #111; border-radius: 16px; padding: 40px; max-width: 800px; margin: 40px auto; text-align: left;">
+        <h2>How to Get Involved</h2>
+        <p>Join our Telegram group, contribute to the GitHub repository, or participate in the competitions. Educators are especially welcome to submit their own lesson plans and toolkits.</p>
+        <a href="https://t.me/LayerZoo" target="_blank" class="button" style="background:#22c55e;color:#000;padding:15px 30px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:20px;">Join the Telegram Community</a>
     </div>
 </div>
 
-  <!-- Navigation Script -->
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
+<script src="menu.js"></script>
+<!-- Last updated: 2026-06-25 -->
+<script src="ga-tracking.js"></script>
 </body>
 </html>
